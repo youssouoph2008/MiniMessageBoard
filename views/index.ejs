@@ -1,0 +1,15 @@
+<h1><%= title %></h1>
+
+<a href="/new">➕ New Message</a>
+
+<ul>
+  <% messages.forEach((msg, index) => { %>
+    <li>
+      <p><strong><%= msg.user %></strong></p>
+      <p><%= msg.text %></p>
+      <p><%= msg.added.toDateString() %></p>
+
+      <a href="/message/<%= index %>">Open</a>
+    </li>
+  <% }) %>
+</ul>
